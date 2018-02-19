@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="650.0" prefWidth="1100.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mproject.TicketsController">
+   <children>
+      <AnchorPane prefHeight="105.0" prefWidth="1100.0" style="-fx-background-color: rgb(49, 68, 90,0.9);">
+         <children>
+            <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="51.0" layoutX="22.0" layoutY="9.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/left.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <TableView fx:id="tablepartnersInfo2" layoutX="14.0" layoutY="113.0" onMouseClicked="#Selectedtable" prefHeight="491.0" prefWidth="980.0">
+         <columns>
+            <TableColumn fx:id="colIds" prefWidth="86.0" text="عدد العملا  " />
+            <TableColumn fx:id="colName" prefWidth="148.0" text=" اسم العميل    " />
+            <TableColumn fx:id="colprojectName" prefWidth="135.0" text="اسم المشروع   " />
+            <TableColumn fx:id="colphone1" prefWidth="113.0" text="رقم التلفون1  " />
+            <TableColumn fx:id="colphone2" prefWidth="134.0" text="رقم التلفون 2   " />
+            <TableColumn fx:id="colTimeOfins" prefWidth="121.0" text="اخر معاد للدفع " />
+            <TableColumn fx:id="colmoneyOfins" prefWidth="116.0" text="تكلفة القسط  " />
+            <TableColumn fx:id="colnumberOfins" prefWidth="114.0" text="رقم القسط" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnpay" buttonType="RAISED" layoutX="1002.0" layoutY="188.0" onAction="#switchtopay" prefHeight="35.0" prefWidth="87.0" style="-fx-background-color: #00B3A0;" text="دفع" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
